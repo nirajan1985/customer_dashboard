@@ -1,27 +1,9 @@
 import React from "react";
-import {
-  List,
-  Datagrid,
-  TextField,
-  DateField,
-  Filter,
-  SearchInput,
-} from "react-admin";
-
-const InvoiceFilter = (props) => (
-  <Filter {...props}>
-    <SearchInput
-      placeholder="search by entity"
-      source="entity_name"
-      alwaysOn
-      resettable
-    />
-  </Filter>
-);
+import { List, Datagrid, TextField, DateField } from "react-admin";
 
 const InvoiceList = (props) => {
   return (
-    <List {...props} filters={<InvoiceFilter />}>
+    <List {...props}>
       <Datagrid>
         <TextField source="id" />
         <TextField source="entity_name" />
