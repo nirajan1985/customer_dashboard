@@ -1,9 +1,22 @@
 import React from "react";
-import { List, Datagrid, TextField, DateField } from "react-admin";
+import {
+  List,
+  Datagrid,
+  TextField,
+  DateField,
+  TextInput,
+  DateInput,
+} from "react-admin";
+
+const invoiceFilters = [
+  <DateInput source="period_start" />,
+  <DateInput source="period_end" />,
+  <TextInput source="entity_name" />,
+];
 
 const InvoiceList = (props) => {
   return (
-    <List {...props}>
+    <List {...props} filters={invoiceFilters}>
       <Datagrid>
         <TextField source="id" />
         <TextField source="entity_name" />
