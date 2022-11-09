@@ -20,9 +20,9 @@ const InvoiceList = (props) => {
       <Datagrid>
         <TextField source="id" />
         <TextField source="entity_name" />
-        <TextField source="total" />
         <DateField source="period_start" />
         <DateField source="period_end" />
+        <TextField source="total" />
       </Datagrid>
     </List>
   );
